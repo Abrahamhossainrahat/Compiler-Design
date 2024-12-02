@@ -34,10 +34,17 @@ int main(){
     string word;
     while(getline(cin, word)){
         if(isCharVariable(word)){
-            cout<<word<<" : Character variable "<<endl;
+            if(word.size()>=4)
+                cout<<word<<" : Character variable "<<endl;
+            else{
+                cout<<word<<" : Undefine "<<endl;
+            }
         }
         else if(isBinaryVariable(word)){
-            cout<<word<<" : Binary variable "<<endl;
+            if(word.size()>=4)
+                cout<<word<<" : Binary variable "<<endl;
+                else
+                cout<<word<<" : Undefine "<<endl;
         }
         else if(isBinaryNum(word)){
             cout<<word<<" : Binary number "<<endl;
