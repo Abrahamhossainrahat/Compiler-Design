@@ -18,7 +18,7 @@ bool isNum(string token){
     //     }
     //     //return true;
     // }
-    if(token[0] == '1' || (token[0] == '0' && token[1] == '.')){
+    if(token[0] != '0' || (token[0] == '0' && token[1] == '.')){
         size_t dotPosition = token.find('.');
          //cout<<"sizedot :"<<token<<" : "<<dotPosition<<endl;
         int dotCount = count(token.begin(), token.end(), '.');
